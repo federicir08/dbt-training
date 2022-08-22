@@ -2,7 +2,7 @@ select
 --from raw orders
 o.orderid, o.orderdate, o.shipdate,o.shipmode,
 c.customername, c.segment, c.country,
-p.productname, p.subcategory,
+p.productid,p.productname, p.category,p.subcategory,
 ordersellingprice - ordercostprice as orderprofit,
 o.ordercostprice, o.ordersellingprice
 from {{ ref('raw_orders') }} o
